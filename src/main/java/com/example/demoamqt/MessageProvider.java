@@ -18,4 +18,13 @@ public class MessageProvider {
         );
         System.out.println("Message sent : "+message);
     }
+
+    public void sendMessage(MessageDto message){
+        rabbitTemplate.convertAndSend(
+                RabbitMqConfig.EXCHANGE_NAME,
+                RabbitMqConfig.ROUTING_KEY,
+                message
+        );
+        System.out.println("Message sent : "+message);
+    }
 }
