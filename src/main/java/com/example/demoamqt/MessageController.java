@@ -18,9 +18,10 @@ public class MessageController {
  curl -X POST http://localhost:8080/v2/send \
  -H "Content-Type: application/json" \
  -d '{
- "name": "TestName",
- "count": 5
- }'
+"strValue": "TestName",
+"intValue": 5,
+"doubleValue": 3.14
+}'
 
      * @param message
      * @return
